@@ -102,6 +102,9 @@ public class MainActivity : Activity, GifImageView.IOnFrameAvailableListener
 
 You can see an example of that in the sample application.
 
+### In Action
+![](sample.gif)
+
 ### Outstanding issues
 
 * Transparency on GIFs is currently not supported and will show up black.
