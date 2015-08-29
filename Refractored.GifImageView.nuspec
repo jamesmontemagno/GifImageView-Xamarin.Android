@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+   <metadata minClientVersion="2.7.2">
+       <id>Refractored.GifImageView</id>
+       <version>1.2.0.0</version>
+       <title>GifImageView for Xamarin.Android</title>
+       <authors>James Montemagno</authors>
+       <owners>James Montemagno</owners>
+       <licenseUrl>https://github.com/jamesmontemagno/GifImageView-Xamarin.Android/blob/master/LICENSE.md</licenseUrl>
+       <projectUrl>https://github.com/jamesmontemagno/GifImageView-Xamarin.Android</projectUrl>
+       <requireLicenseAcceptance>false</requireLicenseAcceptance>
+       <description>
+         Xamarin.Android ImageView that handles Animated GIF images!
+       </description>
+       <summary>Xamarin.Android ImageView that handles Animated GIF images!</summary>
+       <tags>xamarin, gif, animated, android</tags>
+       <dependencies>
+       </dependencies>
+   </metadata>
+   <files>
+     <!--Xamarin.Android-->
+     <file src="GifImageView/bin/Release/Refractored.GifImageView.dll" target="lib\monoandroid\Refractored.GifImageView.dll" />
+   </files>
+</package>

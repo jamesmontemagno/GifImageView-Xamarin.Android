@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GifImageView", "GifImageView\GifImageView.csproj", "{BB269FA5-6DBC-4D9B-8225-B14FC981AD3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GifImageViewSample", "GifImageViewSample\GifImageViewSample.csproj", "{9A8F1F29-3ECC-4B29-8E7C-99FA7963B55B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A8F1F29-3ECC-4B29-8E7C-99FA7963B55B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A8F1F29-3ECC-4B29-8E7C-99FA7963B55B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A8F1F29-3ECC-4B29-8E7C-99FA7963B55B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A8F1F29-3ECC-4B29-8E7C-99FA7963B55B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB269FA5-6DBC-4D9B-8225-B14FC981AD3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB269FA5-6DBC-4D9B-8225-B14FC981AD3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB269FA5-6DBC-4D9B-8225-B14FC981AD3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB269FA5-6DBC-4D9B-8225-B14FC981AD3F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
