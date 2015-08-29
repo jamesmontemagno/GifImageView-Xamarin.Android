@@ -46,9 +46,12 @@ protected override void OnCreate(Bundle savedInstanceState)
             try
             {
                 ActionBar.Title = "Error downloading";
-                var bytes = await client.GetByteArrayAsync("http://dogoverflow.com/dRX5G8qK");
-                gifImageView.SetBytes(bytes);
-                gifImageView.StartAnimation();
+                using(var client = new HttpClient())
+                {
+                    var bytes = await client.GetByteArrayAsync("http://dogoverflow.com/dRX5G8qK");
+                    gifImageView.SetBytes(bytes);
+                    gifImageView.StartAnimation();
+                }
             }
             catch(Exception ex)
             {
