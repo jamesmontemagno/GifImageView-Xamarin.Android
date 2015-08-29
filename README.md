@@ -9,16 +9,18 @@ This is a derivative of Felipe Lima's GifImageView: https://github.com/felipecsl
 
 Install NuGet Package into Android project: https://www.nuget.org/packages/Refractored.GifImageView
 
-In your Android XML:
+**In your Android XML:**
 
+```xml
 <com.felipecsl.gifimageview.library.GifImageView
     android:id="@+id/gifImageView"
     android:layout_gravity="center"
     android:scaleType="fitCenter"
     android:layout_width="match_parent"
     android:layout_height="match_parent" />
+```
 
-In your Activity class:
+**In your Activity class:**
 
 Add using statement:
 ```csharp
