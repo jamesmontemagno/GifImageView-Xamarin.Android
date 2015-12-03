@@ -73,7 +73,9 @@ protected override void OnStart()
 }
 ```
 
-If you need to post-process the GIF frames, you can do that via ``ISetOnFrameAvailableListener``.
+If you need to post-process the GIF frames, you can do that via ``IOnFrameAvailableListener``.
+
+If you do this you MUST call GC.Collect(); in your implentation:
 
 
 ```csharp
@@ -92,6 +94,7 @@ public class MainActivity : Activity, GifImageView.IOnFrameAvailableListener
 
     public Bitmap OnFrameAvailable(Bitmap bitmap)
     {
+        GC.Collect();
         if (shouldBlur)
             return blur.BlurImage(bitmap);
 
