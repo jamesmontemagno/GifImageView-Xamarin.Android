@@ -29,5 +29,13 @@
         android:layout_gravity="center"
         android:scaleType="fitCenter"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <com.felipecsl.gifimageview.library.GifImageView
+        android:id="@+id/gifImageView2"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 </LinearLayout>

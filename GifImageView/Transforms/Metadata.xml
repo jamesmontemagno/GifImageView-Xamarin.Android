@@ -3,12 +3,13 @@
   <attr path="/api/package[@name='com.felipecsl.gifimageview.library']" name="managedName">Felipecsl.GifImageViewLibrary</attr>
 
   <!-- Rename clashing fields -->
-    <attr path="/api/package[@name='com.felipecsl.gifimageview.library']/class[@name='GifDecoder']/method[@name='getWidth']" name="managedName">gifWidth</attr>
+   <!--- <attr path="/api/package[@name='com.felipecsl.gifimageview.library']/class[@name='GifDecoder']/method[@name='getWidth']" name="managedName">gifWidth</attr>
     <attr path="/api/package[@name='com.felipecsl.gifimageview.library']/class[@name='GifDecoder']/method[@name='getHeight']" name="managedName">gifHeight</attr>
     <attr path="/api/package[@name='com.felipecsl.gifimageview.library']/class[@name='GifDecoder']/method[@name='getLoopCount']" name="managedName">gifLoopCount</attr>
     <attr path="/api/package[@name='com.felipecsl.gifimageview.library']/class[@name='GifDecoder']/method[@name='getFrameCount']" name="managedName">gifFrameCount</attr>
-
+    -->
     <!-- Manually fix up missing parameter names -->
+
     <attr path="/api/package[@name='com.felipecsl.gifimageview.library']/interface[@name='GifImageView.OnFrameAvailableListener']/method[@name='onFrameAvailable']/parameter[1]" name="managedName">bitmap</attr>
     <attr path="/api/package[@name='com.felipecsl.gifimageview.library']/class[@name='GifImageView']/method[@name='setBytes' and count(parameter)=1]/parameter[1]" name="managedName">bytes</attr>
 </metadata>

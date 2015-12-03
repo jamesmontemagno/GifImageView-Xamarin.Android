@@ -2,12 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
    <metadata minClientVersion="2.7.2">
        <id>Refractored.GifImageView</id>
-       <version>1.2.0.0</version>
+       <version>2.0.0</version>
        <title>GifImageView for Xamarin.Android</title>
        <authors>James Montemagno</authors>
        <owners>James Montemagno</owners>
        <licenseUrl>https://github.com/jamesmontemagno/GifImageView-Xamarin.Android/blob/master/LICENSE.md</licenseUrl>
        <projectUrl>https://github.com/jamesmontemagno/GifImageView-Xamarin.Android</projectUrl>
+       <iconUrl>http://refractored.com/images/gifimageview_small.png</iconUrl>
        <requireLicenseAcceptance>false</requireLicenseAcceptance>
        <description>
          Xamarin.Android ImageView that handles Animated GIF images!
@@ -16,6 +17,11 @@
        <tags>xamarin, gif, animated, android</tags>
        <dependencies>
        </dependencies>
+       <releaseNotes>
+       [2.0.0]
+       -Update to latest library, includes transparent gif support
+       -Ensure if you implement IOnFrameAvailableListener you call GC.Collect(); in the method
+     </releaseNotes>
    </metadata>
    <files>
      <!--Xamarin.Android-->

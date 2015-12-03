@@ -27,9 +27,11 @@ namespace GifImageViewSample
             SetContentView(Resource.Layout.Main);
 
             gifImageView = FindViewById<GifImageView>(Resource.Id.gifImageView);
+            var gifImageViewTrans = FindViewById<GifImageView>(Resource.Id.gifImageView2);
             btnToggle = FindViewById<Button>(Resource.Id.btnToggle);
             btnBlur = FindViewById<Button>(Resource.Id.btnBlur);
             var btnClear = FindViewById<Button>(Resource.Id.btnClear);
+            //if setting OnFrameAvailableListener you must call GC Collect()
             gifImageView.OnFrameAvailableListener = this;
 
             blur = Blur.NewInstance(this);
@@ -62,9 +64,14 @@ namespace GifImageViewSample
             {
                 ActionBar.Title = "Loading...";
                 var client = new HttpClient();
-                var bytes = await client.GetByteArrayAsync("http://dogoverflow.com/dRX5G8qK");
+                var bytes = await client.GetByteArrayAsync("http://dogoverflow.com/dogs/RX5G8qK.gif");
                 gifImageView.SetBytes(bytes);
                 gifImageView.StartAnimation();
+
+
+                bytes = await client.GetByteArrayAsync("http://25.media.tumblr.com/c99a579db3ae0fc164bf4cca148885d3/tumblr_mjgv8kEuMg1s87n79o1_400.gif");
+                gifImageViewTrans.SetBytes(bytes);
+                gifImageViewTrans.StartAnimation();
                 ActionBar.Title = "Gif!!!";
                 btnBlur.Enabled = true;
                 btnClear.Enabled = true;
@@ -73,11 +80,14 @@ namespace GifImageViewSample
             catch(Exception ex)
             {
                 ActionBar.Title = "error downloading";
+                Toast.MakeText(this, ex.ToString(), ToastLength.Long).Show();
             }
         }
 
         public Bitmap OnFrameAvailable(Bitmap bitmap)
         {
+            //THIS MUST BE CALLED
+            GC.Collect();
             if (shouldBlur)
                 return blur.BlurImage(bitmap);
 

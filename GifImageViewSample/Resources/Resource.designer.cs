@@ -56,6 +56,9 @@ namespace GifImageViewSample
 			// aapt resource value: 0x7f050003
 			public const int gifImageView = 2131034115;
 			
+			// aapt resource value: 0x7f050004
+			public const int gifImageView2 = 2131034116;
+			
 			static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
