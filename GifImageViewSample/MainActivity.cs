@@ -9,7 +9,7 @@ using Android.Graphics;
 namespace GifImageViewSample
 {
     [Activity(Label = "GifImageView Sample", MainLauncher = true, Icon = "@mipmap/icon")]
-    public class MainActivity : Activity, GifImageView.IOnFrameAvailableListener
+    public class MainActivity : Activity, GifImageView.IOnFrameAvailable
     {
 
         GifImageView gifImageView;
@@ -32,7 +32,7 @@ namespace GifImageViewSample
             btnBlur = FindViewById<Button>(Resource.Id.btnBlur);
             var btnClear = FindViewById<Button>(Resource.Id.btnClear);
             //if setting OnFrameAvailableListener you must call GC Collect()
-            gifImageView.OnFrameAvailableListener = this;
+            gifImageView.OnFrameAvailable = this;
 
             blur = Blur.NewInstance(this);
             btnBlur.Click += (sender, e) => 
