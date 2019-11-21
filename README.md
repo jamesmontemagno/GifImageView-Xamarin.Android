@@ -72,6 +72,19 @@ protected override void OnStart()
     gifImageView.StartAnimation();
 }
 ```
+If you need to load gif from Asset or Drawable folder, you can you below method
+
+```csharp 
+                // From Asset
+                Stream input = Assets.Open("splashgif.gif");
+                // From Drawable
+                Stream input = Resources.OpenRawResource(Resource.Drawable.splashgif);
+                
+                gifImageView.SetBytes(bytes);
+                gifImageView.StartAnimation();
+                
+```
+
 
 If you need to post-process the GIF frames, you can do that via ``IOnFrameAvailableListener``.
 
